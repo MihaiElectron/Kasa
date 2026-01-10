@@ -1,0 +1,42 @@
+.
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── public
+│   └── kasa-favicon.png
+├── README.md
+├── src
+│   ├── App.css
+│   ├── App.jsx
+│   ├── assets
+│   │   └── images
+│   │       ├── logo-kasa.png
+│   │       └── logo-kasa-white.png
+│   ├── components
+│   │   └── Header
+│   │       └── Header.jsx
+│   ├── data
+│   │   └── logements.json
+│   ├── index.css
+│   ├── layouts
+│   │   └── MainLayout.jsx
+│   ├── main.jsx
+│   ├── pages
+│   │   ├── About.jsx
+│   │   ├── Error.jsx
+│   │   ├── Home.jsx
+│   │   └── Housing.jsx
+│   └── styles
+│       ├── base
+│       │   ├── index.scss
+│       │   ├── _reset.scss
+│       │   ├── _typography.scss
+│       │   └── _variables.scss
+│       ├── components
+│       ├── main.scss
+│       └── pages
+├── tree.txt
+└── vite.config.js
+
+14 directories, 26 files
