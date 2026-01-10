@@ -1,0 +1,222 @@
+/* ============================================
+   Reset SCSS 
+   ============================================ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset des marges et paddings */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Configuration du HTML et du body */
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Éléments de texte */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Listes */
+ul, ol {
+  list-style: none;
+}
+
+/* Liens */
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* Boutons et formulaires */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+  
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+input,
+textarea,
+select {
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Suppression des flèches pour input number */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+}
+
+/* Suppression de l'icône de recherche */
+input[type="search"] {
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
+
+/* Fieldset */
+fieldset {
+  border: none;
+}
+
+/* Médias */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  fill: currentColor;
+}
+
+/* Tableaux */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Citations */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* Éléments interactifs */
+summary {
+  cursor: pointer;
+}
+
+/* Accessibilité - cacher visuellement mais garder pour les lecteurs d'écran */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Reset pour les éléments iframe */
+iframe {
+  border: 0;
+}
+
+/* Éléments de code */
+code,
+pre,
+kbd,
+samp {
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  font-size: 1em;
+}
+
+/* Suppression du style par défaut de l'élément hr */
+hr {
+  border: none;
+  border-top: 1px solid currentColor;
+  opacity: 0.25;
+}
+
+/* Amélioration du rendu des petites tailles de texte */
+small {
+  font-size: 0.875em;
+}
+
+/* Empêcher sub et sup d'affecter la hauteur de ligne */
+sub,
+sup {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Reset pour les éléments d'adresse */
+address {
+  font-style: inherit;
+}
+
+/* Amélioration du focus visible pour l'accessibilité */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Support du mode sombre */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
