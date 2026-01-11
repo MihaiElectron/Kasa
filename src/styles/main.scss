@@ -1,4 +1,4 @@
 // src/styles/main.scss
-@use 'base';
-@use 'components';
-@use 'pages';
+@use './base' as *;
+@use './components' as *;
+@use './pages' as *;

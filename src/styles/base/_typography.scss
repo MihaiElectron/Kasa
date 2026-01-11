@@ -1,8 +1,7 @@
-@use './variables' as vars;
+@use './variables' as v;
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: v.$font-primary;
     font-size: 24px;
     line-height: 1.43;
-    background-color: #fff;
-  }
+}
