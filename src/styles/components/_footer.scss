@@ -1,0 +1,47 @@
+@use '../base/variables' as v;
+
+.footer {
+  width: 100%;
+  background-color: v.$footer-bg-color;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 209px;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__logo {
+    margin-top: 66px;
+    margin-bottom: 28.56px;
+    height: 39.44px;
+    width: 122px;
+  }
+
+  &__text {
+    color: v.$footer-text-color;
+    font-size: v.$font-size-footer-desk;
+    font-weight: v.$font-weight-footer-desk;
+  }
+}
+
+@media (max-width: v.$bp-mobile) {
+  .footer {
+    position: relative;
+
+    &__logo {
+      margin-bottom: 0;
+    }
+
+    &__text {
+      position: absolute;
+      font-size: v.$font-size-footer-mobile;
+      font-weight: v.$font-weight-footer-mobile;
+      width: 133px;
+      bottom: 58px;
+    }
+  }
+}

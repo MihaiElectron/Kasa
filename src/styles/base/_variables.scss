@@ -2,8 +2,8 @@
 $font-primary: 'Montserrat', sans-serif;
 
 //Colors
-
-
+$footer-bg-color: black;
+$footer-text-color: white;
 // Font sizes
 $font-size-base-desk: 18px;
 $font-size-base-mobile: 12px;
@@ -15,6 +15,9 @@ $font-size-heading: 24px;
 
 $font-size-banner-desk: 48px;
 $font-size-banner-mobile: 24px;
+
+$font-size-footer-desk: 24px;
+$font-size-footer-mobile: 12px;
 
 // Font weight 
 $font-weight-base-desk: 400;
@@ -28,6 +31,9 @@ $font-weight-banner-mobile: 700;
 
 $font-weight-card-desk: 700;
 $font-weight-card-mobile: 700;
+
+$font-weight-footer-desk: 500;
+$font-weight-footer-mobile: 700;
 
 // Line heights
 $line-height-base: 1.43;
@@ -50,6 +56,9 @@ $weight-card-desk: 340px;
 
 $height-card-mobile: 335px;
 $weight-card-mobile: 255px;
+
+$height-footer-desk: 209px;
+$height-footer-mobile: 209px;
 
 // Breakpoints
 $bp-mobile: 768px;

@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom'
 import Header from '../components/Header/Header'
+import Footer from '../components/Footer/Footer';
 
 
 function MainLayout() {
@@ -9,6 +10,7 @@ function MainLayout() {
       <Header />             {/* toujours visible */}
         <Outlet />           {/* affichera Home, About, Housing, Error */}
       </div>
+      <Footer />
     </>
   )
 }
