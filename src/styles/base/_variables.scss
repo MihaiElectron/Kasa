@@ -1,6 +1,9 @@
 // Font families
 $font-primary: 'Montserrat', sans-serif;
 
+//Colors
+
+
 // Font sizes
 $font-size-base-desk: 18px;
 $font-size-base-mobile: 12px;
@@ -23,6 +26,9 @@ $font-weight-nav-mobile: 500;
 $font-weight-banner-desk: 700;
 $font-weight-banner-mobile: 700;
 
+$font-weight-card-desk: 700;
+$font-weight-card-mobile: 700;
+
 // Line heights
 $line-height-base: 1.43;
 
@@ -32,3 +38,19 @@ $shadow-default: 0 4px 4px rgba(0, 0, 0, 0.25);
 //Radius
 $border-radius-banner-desk: 25px;
 $border-radius-banner-mobile: 10px;
+
+$border-radius-home-backround-desk: 25px;
+
+$border-radius-card-desk: 10px;
+$border-radius-card-mobile: 10px;
+
+//Height / Weight
+$height-card-desk: 340px;
+$weight-card-desk: 340px;
+
+$height-card-mobile: 335px;
+$weight-card-mobile: 255px;
+
+// Breakpoints
+$bp-mobile: 768px;
+
