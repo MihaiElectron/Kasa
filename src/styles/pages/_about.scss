@@ -1,0 +1,22 @@
+@use '../base/variables' as v;
+
+.page-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 38px;
+  margin-bottom: 38px;
+  padding-left: 108.5px;
+  padding-right: 108.5px;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .page-about {
+    margin-top: 19px;
+    gap: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}

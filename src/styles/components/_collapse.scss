@@ -1,0 +1,92 @@
+.collapse {
+  width: 100%;
+
+  /* HEADER (barre rouge) */
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    background-color: #ff6060;
+    border-radius: 10px;
+  }
+
+  /* TITRE */
+  &__title {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  /* ICÔNE */
+  &__icon {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
+
+    /* rotation sens inverse des aiguilles */
+    &--open {
+      transform: rotate(-180deg);
+    }
+  }
+
+  /* CONTENU (wrapper animé) */
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #f6f6f6;
+    transition: max-height 0.35s ease;
+    border-radius: 0 0 10px 10px;
+
+    &--open {
+      max-height: 500px;
+    }
+  }
+
+  /* CONTENU INTERNE (animation du texte) */
+  &__content-inner {
+    padding: 15px 20px;
+    font-size: 16px;
+    color: #000000;
+
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: transform 0.35s ease, opacity 0.25s ease;
+  }
+
+  /* état ouvert → animation du texte */
+  &__content--open &__content-inner {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .collapse {
+
+    &__header {
+      height: 30px;
+      width: 100%;
+      border-radius: 5px;
+    }
+    
+    &__content-inner {
+      font-size: 13px;
+      padding: 10px 12.5px 10px 10px;
+    }
+
+    &__title {
+      font-size: 13px;
+      font-weight: 700;
+    }    
+
+    &__icon {
+      height: 9px;
+      width: 16px;
+    }
+  }
+}
