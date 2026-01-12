@@ -3,6 +3,21 @@
 .housing {
   display: flex;
   flex-direction: column;
+  font-size: 36px;
+  font-weight: 500;
+
+  &__title {
+    margin-top: 20px;
+    color: v.$primary-color;
+    font-size: v.$font-size-housing-title-desk;
+    font-weight: v.$font-weight-housing-title-desk;
+  }
+
+  &__location {
+    margin-top: 5px;
+    font-size: v.$font-size-housing-location-desk;
+    font-weight: v.$font-weight-housing-location-desk;
+  }
 
   &__tags-and-ratings {
     display: flex;
@@ -15,12 +30,19 @@
     display: flex;
     gap: 10px;
   }
+}
 
-  &__title {
-    margin-top: 20px;
-  }
+@media (max-width: 768px) {
+  .housing {
 
-  &__location {
-    margin-top: 5px;
+    &__title {
+      font-size: v.$font-size-housing-title-mobile;
+      font-weight: v.$font-weight-housing-title-mobile;
+    }
+
+    &__location {
+      font-size: v.$font-size-housing-location-mobile;
+      font-weight: v.$font-weight-housing-location-mobile;
+    }
   }
 }

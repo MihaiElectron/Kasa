@@ -1,6 +1,7 @@
 import { useParams, Navigate } from 'react-router-dom';
 import logements from '../data/logements.json';
 import Carousel from '../components/Carousel/Carousel';
+import Host from '../components/Host/Host';
 import Tag from '../components/Tag/Tag';
 import Rating from '../components/Rating/Rating';
 
@@ -15,6 +16,10 @@ function Housing() {
       <Carousel pictures={logement.pictures} />
       <h1 className="housing__title">{logement.title}</h1>
       <p className="housing__location">{logement.location}</p>
+
+      <div className="housing__host">
+        <Host name={logement.host.name} picture={logement.host.picture} />
+      </div>
 
       <div className="housing__tags-and-ratings">
         <div className="housing__tags">

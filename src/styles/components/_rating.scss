@@ -1,3 +1,5 @@
+@use '../base/variables' as v;
+
 .rating {
   display: flex;   // obligatoire
   gap: 5px;        // espace entre étoiles
