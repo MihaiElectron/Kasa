@@ -16,20 +16,27 @@ function Housing() {
     <main className="housing">
       <Carousel pictures={logement.pictures} />
 
-      <h1 className="housing__title">{logement.title}</h1>
-      <p className="housing__location">{logement.location}</p>
+      {/* TOP SECTION */}
+      <div className="housing__top">
+        
+        {/* GROUPE INFOS */}
+        <div className="housing__infos">
+          <h1 className="housing__title">{logement.title}</h1>
+          <p className="housing__location">{logement.location}</p>
 
-      <div className="housing__host">
-        <Host name={logement.host.name} picture={logement.host.picture} />
-      </div>
-
-      <div className="housing__tags-and-ratings">
-        <div className="housing__tags">
-          {logement.tags.map((tag, index) => (
-            <Tag key={index} label={tag} />
-          ))}
+          <div className="housing__tags">
+            {logement.tags.map((tag, index) => (
+              <Tag key={index} label={tag} />
+            ))}
+          </div>
         </div>
-        <Rating rating={logement.rating} />
+
+        {/* GROUPE HOST + RATING */}
+        <div className="housing__host-and-ratings">
+          <Rating rating={logement.rating} />
+          <Host name={logement.host.name} picture={logement.host.picture} />
+        </div>
+
       </div>
 
       {/* COLLAPSES */}

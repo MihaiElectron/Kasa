@@ -4,9 +4,21 @@
   display: flex;
   gap: 5px;
   align-items: center;
+  
+  &__star {
+    width: 25px;
+    height: 25px;
+  }
 }
+  
+@media (max-width: 768px) {
 
-.rating__star {
-  width: 25px;
-  height: 25px;
+  .rating {
+    gap: 4.59px;
+        
+    &__star {
+      width: 13.41px;
+      height: 13px;
+    }
+  }
 }

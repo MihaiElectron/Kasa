@@ -3,45 +3,65 @@
 .housing {
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
+
+  /* TOP ZONE */
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  /* GROUPE INFOS */
+  &__infos {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
 
   &__title {
-    margin-top: 20px;
     color: v.$primary-color;
     font-size: v.$font-size-housing-title-desk;
     font-weight: v.$font-weight-housing-title-desk;
   }
 
   &__location {
-    margin-top: 5px;
     font-size: v.$font-size-housing-location-desk;
     font-weight: v.$font-weight-housing-location-desk;
   }
 
-  &__tags-and-ratings {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; // aligne tags et rating sur la même ligne
-    margin-top: 20px;
-  }
-
   &__tags {
     display: flex;
-    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* GROUPE HOST + RATING */
+  &__host-and-ratings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     gap: 10px;
   }
 
+  /* COLLAPSES */
   &__collapses {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    width: 100%;
     gap: 76px;
+    margin-top: 25px;
   }
-
 }
 
+/* 📱 MOBILE */
 @media (max-width: 768px) {
   .housing {
+
+    &__top {
+      flex-direction: column;
+      gap: 20px;
+    }
 
     &__title {
       font-size: v.$font-size-housing-title-mobile;
@@ -53,8 +73,24 @@
       font-weight: v.$font-weight-housing-location-mobile;
     }
 
+    /* host + rating en ROW */
+    &__host-and-ratings {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    /* ordre mobile */
+    &__host-and-ratings > :first-child {
+      order: 1; // Rating
+    }
+
+    &__host-and-ratings > :last-child {
+      order: 2; // Host
+    }
+
     &__collapses {
-      display: flex;
       flex-direction: column;
       gap: 20px;
       margin-top: 13px;
