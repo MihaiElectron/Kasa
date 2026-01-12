@@ -1,9 +1,10 @@
 .rating {
-  display: flex;
-  gap: 10px;
-}
+  display: flex;   // obligatoire
+  gap: 5px;        // espace entre étoiles
+  align-items: center;
 
-.rating__star {
-  width: 25px;
-  height: 25px;
+  &__star {
+    width: 25px;
+    height: 25px;
+  }
 }

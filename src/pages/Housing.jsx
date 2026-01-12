@@ -1,30 +1,32 @@
-import { useParams, Navigate } from 'react-router-dom'
-import logements from '../data/logements.json'
-import Tag from '../components/Tag/Tag'
+import { useParams, Navigate } from 'react-router-dom';
+import logements from '../data/logements.json';
+import Carousel from '../components/Carousel/Carousel';
+import Tag from '../components/Tag/Tag';
 import Rating from '../components/Rating/Rating';
 
 function Housing() {
-  const { id } = useParams()
+  const { id } = useParams();
+  const logement = logements.find(item => item.id === id);
 
-  const logement = logements.find(item => item.id === id)
-
-  if (!logement) {
-    return <Navigate to="/404" />
-  }
+  if (!logement) return <Navigate to="/404" />;
 
   return (
     <main className="housing">
+      <Carousel pictures={logement.pictures} />
       <h1 className="housing__title">{logement.title}</h1>
       <p className="housing__location">{logement.location}</p>
 
-      <div className="housing__tags">
-        {logement.tags.map((tag, index) => (
-          <Tag key={index} label={tag} />
-        ))}
-      </div>
+      <div className="housing__tags-and-ratings">
+        <div className="housing__tags">
+          {logement.tags.map((tag, index) => (
+            <Tag key={index} label={tag} />
+          ))}
+        </div>
+
         <Rating rating={logement.rating} />
+      </div>
     </main>
-  )
+  );
 }
 
-export default Housing
+export default Housing;

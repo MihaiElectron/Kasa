@@ -2,15 +2,25 @@
 
 .housing {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+
+  &__tags-and-ratings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; // aligne tags et rating sur la même ligne
+    margin-top: 20px;
+  }
 
   &__tags {
+    display: flex;
     gap: 10px;
   }
 
-}
+  &__title {
+    margin-top: 20px;
+  }
 
-@media (max-width: 768px) {
-
-
+  &__location {
+    margin-top: 5px;
+  }
 }
