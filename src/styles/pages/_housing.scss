@@ -3,8 +3,6 @@
 .housing {
   display: flex;
   flex-direction: column;
-  font-size: 36px;
-  font-weight: 500;
 
   &__title {
     margin-top: 20px;
@@ -28,8 +26,18 @@
 
   &__tags {
     display: flex;
+    flex-direction: row;
     gap: 10px;
   }
+
+  &__collapses {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 76px;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -43,6 +51,14 @@
     &__location {
       font-size: v.$font-size-housing-location-mobile;
       font-weight: v.$font-weight-housing-location-mobile;
+    }
+
+    &__collapses {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 13px;
+      margin-bottom: 27px;
     }
   }
 }

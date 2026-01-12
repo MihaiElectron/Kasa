@@ -1,12 +1,12 @@
 @use '../base/variables' as v;
 
 .rating {
-  display: flex;   // obligatoire
-  gap: 5px;        // espace entre étoiles
+  display: flex;
+  gap: 5px;
   align-items: center;
+}
 
-  &__star {
-    width: 25px;
-    height: 25px;
-  }
+.rating__star {
+  width: 25px;
+  height: 25px;
 }

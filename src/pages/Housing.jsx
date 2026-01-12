@@ -4,6 +4,7 @@ import Carousel from '../components/Carousel/Carousel';
 import Host from '../components/Host/Host';
 import Tag from '../components/Tag/Tag';
 import Rating from '../components/Rating/Rating';
+import Collapse from '../components/Collapse/Collapse';
 
 function Housing() {
   const { id } = useParams();
@@ -14,6 +15,7 @@ function Housing() {
   return (
     <main className="housing">
       <Carousel pictures={logement.pictures} />
+
       <h1 className="housing__title">{logement.title}</h1>
       <p className="housing__location">{logement.location}</p>
 
@@ -27,8 +29,22 @@ function Housing() {
             <Tag key={index} label={tag} />
           ))}
         </div>
-
         <Rating rating={logement.rating} />
+      </div>
+
+      {/* COLLAPSES */}
+      <div className="housing__collapses">
+        <Collapse title="Description" variant="housing">
+          <p>{logement.description}</p>
+        </Collapse>
+
+        <Collapse title="Équipements" variant="housing">
+          <ul>
+            {logement.equipments.map((equipment, index) => (
+              <li key={index}>{equipment}</li>
+            ))}
+          </ul>
+        </Collapse>
       </div>
     </main>
   );

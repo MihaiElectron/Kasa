@@ -1,21 +1,22 @@
-import { useState, useRef, useEffect } from 'react'
-import arrowIcon from '../../assets/images/collapse-arrow.svg'
+import { useState, useRef, useEffect } from 'react';
+import arrowIcon from '../../assets/images/collapse-arrow.svg';
 
-function Collapse({ title, children }) {
-  const [isOpen, setIsOpen] = useState(false)
-  const contentRef = useRef(null)
-  const [contentHeight, setContentHeight] = useState(0)
+function Collapse({ title, children, variant = 'default' }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const contentRef = useRef(null);
+  const [contentHeight, setContentHeight] = useState(0);
 
   useEffect(() => {
     if (contentRef.current) {
-      setContentHeight(contentRef.current.scrollHeight)
+      setContentHeight(contentRef.current.scrollHeight);
     }
-  }, [children])
+  }, [children]);
 
-  const toggleCollapse = () => setIsOpen(!isOpen)
+  const toggleCollapse = () => setIsOpen(!isOpen);
 
   return (
-    <div className="collapse">
+    // Ajout du variant dans la classe principale
+    <div className={`collapse ${variant !== 'default' ? `collapse--${variant}` : ''}`}>
       <button className="collapse__header" onClick={toggleCollapse}>
         <span className="collapse__title">{title}</span>
         <img
@@ -24,22 +25,16 @@ function Collapse({ title, children }) {
           className={`collapse__icon ${isOpen ? 'collapse__icon--open' : ''}`}
         />
       </button>
-
       <div
-        className={`collapse__content ${
-          isOpen ? 'collapse__content--open' : ''
-        }`}
+        className={`collapse__content ${isOpen ? 'collapse__content--open' : ''}`}
         style={{ maxHeight: isOpen ? `${contentHeight}px` : '0' }}
       >
-        <div
-          className="collapse__content-inner"
-          ref={contentRef}
-        >
+        <div className="collapse__content-inner" ref={contentRef}>
           {children}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Collapse
+export default Collapse;
