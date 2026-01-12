@@ -1,7 +1,6 @@
-// src/pages/Home.jsx
 import Banner from '../components/Banner/Banner'
 import homeBanner from '../assets/images/banner-home.png'
-import Card from '../components/Card/Card';
+import Card from '../components/Card/Card'
 import logements from '../data/logements.json'
 
 function Home() {
@@ -11,6 +10,7 @@ function Home() {
         image={homeBanner}
         title="Chez vous, partout et ailleurs"
       />
+
       <section className="home">
         <div className="home__cards">
           {logements.map((logement) => (
@@ -28,5 +28,3 @@ function Home() {
 }
 
 export default Home
-
-  

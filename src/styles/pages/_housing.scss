@@ -1,0 +1,16 @@
+@use '../base/variables' as v;
+
+.housing {
+  display: flex;
+  justify-content: space-between;
+
+  &__tags {
+    gap: 10px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+
+}

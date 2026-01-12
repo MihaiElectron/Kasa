@@ -3,9 +3,10 @@
 .card {
   position: relative;
   height: v.$height-card-desk;
-
   border-radius: v.$border-radius-card-desk;
   overflow: hidden;
+  text-decoration: none;
+  color: inherit;
   cursor: pointer;
 
   &__image {
