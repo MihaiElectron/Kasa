@@ -1,6 +1,7 @@
 import { useParams, Navigate } from 'react-router-dom'
 import logements from '../data/logements.json'
 import Tag from '../components/Tag/Tag'
+import Rating from '../components/Rating/Rating';
 
 function Housing() {
   const { id } = useParams()
@@ -21,6 +22,7 @@ function Housing() {
           <Tag key={index} label={tag} />
         ))}
       </div>
+        <Rating rating={logement.rating} />
     </main>
   )
 }
