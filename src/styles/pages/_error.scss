@@ -1,0 +1,49 @@
+@use '../base/variables' as v;
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 139px;
+
+  &__code {
+    padding-top: 89px;
+    color: v.$primary-color;
+    font-size: v.$font-size-error-code-desk;
+    font-weight: v.$font-weight-error-code-desk;
+  }
+
+  &__message {
+    color: v.$primary-color;
+    font-size: v.$font-size-error-message-desk;
+    font-weight: v.$font-size-error-message-desk;
+  }
+
+  &__link {
+    font-size: v.$font-size-error-link-desk;
+    font-weight: v.$font-weight-error-link-desk;
+    padding-bottom: 139px;
+  }
+}
+
+@media (max-width: 768px) {
+  .error {
+    gap: 113px;
+
+    &__code {
+      font-size: v.$font-size-error-code-mobile;
+      font-weight: v.$font-weight-error-code-mobile;
+    }
+
+    &__message {
+      color: v.$primary-color;
+      font-size: v.$font-size-error-message-mobile;
+      font-weight: v.$font-weight-error-message-mobile;
+    }
+
+    &__link {
+      font-size: v.$font-size-error-link-mobile;
+      font-weight: v.$font-weight-error-link-mobile;
+    }
+  }
+}
