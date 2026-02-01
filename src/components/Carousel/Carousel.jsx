@@ -4,6 +4,7 @@ import arrow from '../../assets/images/carousel-arrow.png';
 function Carousel({ pictures }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const total = pictures.length;
+  
 
   if (total === 0) return null;
 

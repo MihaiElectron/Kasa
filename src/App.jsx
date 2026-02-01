@@ -10,7 +10,7 @@ function App() {
     <Routes>
       
        {/* Toutes les pages utilisent MainLayout */}
-       <Route element={<MainLayout />}>
+      <Route element={<MainLayout />}>
 
         {/* Page d'accueil */}
         <Route path="/" element={<Home />} />
