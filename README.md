@@ -55,7 +55,7 @@ L'objectif du projet était d'implémenter le front-end d'une application modern
 
 ## Aperçu
 
-![Kasa](.src/assets/images)
+![Kasa](src/assets/images)
 
 Application de location immobilière développée avec React, proposant une navigation multipage, des fiches logements dynamiques, des composants interactifs et une interface responsive.
 
