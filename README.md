@@ -1,63 +1,71 @@
-# 🏠 Kasa – Application de location immobilière
+# Kasa
 
-## 📌 Description
-Kasa est une application web de location immobilière développée avec **React** dans le cadre du **Projet 7 de la formation Intégrateur Web d’OpenClassrooms**.
+## Description
 
-L’objectif est de créer une application moderne, responsive et conforme aux maquettes fournies, en utilisant **React**, **React Router** et des données simulées en **JSON**.
+Kasa est une application web de location immobilière développée dans le cadre de la formation Développeur Intégrateur Web d'OpenClassrooms.
 
----
+L'objectif du projet était d'implémenter le front-end d'une application moderne avec React, React Router et Sass. Les données des logements sont simulées à partir d'un fichier JSON, ce qui permet de construire une interface dynamique sans back-end réel.
 
-## 🎯 Objectifs pédagogiques
-- Initialiser une application React avec Vite
-- Utiliser **React Router** pour la navigation
-- Créer des composants réutilisables
-- Gérer des données dynamiques à partir d’un fichier JSON
-- Respecter des maquettes Figma
-- Implémenter des animations simples (collapse, carousel)
-- Gérer les erreurs de navigation (page 404)
+## Objectifs
 
----
+* Initialiser une application React avec Vite.
+* Configurer la navigation avec React Router.
+* Développer des composants React réutilisables.
+* Exploiter des données issues d'un fichier JSON.
+* Intégrer une interface responsive conforme aux maquettes.
+* Mettre en œuvre des animations CSS avec Sass.
 
-## 🛠️ Technologies utilisées
-- ⚛️ React
-- 🚦 React Router DOM
-- 🎨 Sass (SCSS)
-- ⚡ Vite
-- 📦 npm
+## Technologies utilisées
 
----
+* React
+* React Router
+* Vite
+* JavaScript
+* Sass
+* CSS animations
+* Node.js
+* JSON
+* Figma
 
-# Installer les dépendances de base
-npm install
+## Fonctionnalités
 
-# Créer un nouveau projet React avec Vite
-npm create vite@latest P7_Kasa
-# Lors de la sélection :
-# - Framework : React
-# - Variant : JavaScript
+* Page d'accueil avec liste des logements
+* Page détail pour chaque logement
+* Routes dynamiques
+* Page À propos
+* Page d'erreur 404
+* Carrousel d'images
+* Composants collapsibles
+* Notation par étoiles
+* Affichage des tags
+* Interface responsive
 
-# Installer React Router pour la navigation
-npm install react-router-dom
+## Compétences développées
 
-# Installer Sass pour pouvoir utiliser les fichiers .scss
-npm install -D sass
+* Développement React
+* Composants réutilisables
+* Props React
+* Routage avec React Router
+* Routes dynamiques
+* Gestion des données JSON
+* Structuration d'application front-end
+* Sass
+* Animations CSS
+* Responsive Design
 
-## 📂 Structure du projet
-```txt
-src/
- ├── assets/
- ├── components/
- ├── pages/
- │    ├── Home
- │    ├── About
- │    ├── Housing
- │    └── Error
- ├── data/
- │    └── logements.json
- ├── styles/
- │    ├── base/
- │    ├── components/
- │    ├── pages/
- │    └── main.scss
- ├── App.jsx
- └── main.jsx
+## Aperçu
+
+![Kasa](./assets/kasa-ss.png)
+
+Application de location immobilière développée avec React, proposant une navigation multipage, des fiches logements dynamiques, des composants interactifs et une interface responsive.
+
+## Lancer le projet
+
+1. Cloner le dépôt.
+2. Installer les dépendances avec `npm install`.
+3. Lancer le serveur de développement avec `npm run dev`.
+4. Ouvrir l'URL locale affichée dans le terminal.
+
+## Auteur
+
+Projet réalisé dans le cadre de la formation OpenClassrooms - Développeur Intégrateur Web.
